@@ -72,40 +72,40 @@ class NuevoPage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 20),
-                      Container(
-                        color: Color(0xFFC8CCD0),
-                        padding: EdgeInsets.all(10),
-                        child: Container(
-                          width: double.infinity, 
-                          color: Color(0xFFC8CCD0), 
-                          child: Text(
-                            'Materias',
-                            style: TextStyle(color: Color(0xFF555A5E), fontSize: 14),
+                        Container(
+                          color: Color(0xFFC8CCD0),
+                          padding: EdgeInsets.all(10),
+                          child: Container(
+                            width: double.infinity, 
+                            color: Color(0xFFC8CCD0), 
+                            child: Text(
+                              'Materias',
+                              style: TextStyle(color: Color(0xFF555A5E), fontSize: 14),
+                            ),
                           ),
                         ),
-                      ),
-                       SizedBox(height: 20),
-                      Container(
-                        padding: EdgeInsets.all(10),
-                        child: Container(
-                          width: double.infinity, 
-                          child: Text(
-                            'Evaluaciones',
-                            style: TextStyle(color: Color(0xFFF2F2F3), fontSize: 14),
+                        SizedBox(height: 20),
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          child: Container(
+                            width: double.infinity, 
+                            child: Text(
+                              'Evaluaciones',
+                              style: TextStyle(color: Color(0xFFF2F2F3), fontSize: 14),
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(height: 20),
-                      Container(
-                        padding: EdgeInsets.all(10),
-                        child: Container(
-                          width: double.infinity, 
-                          child: Text(
-                            'Informes',
-                            style: TextStyle(color: Color(0xFFF2F2F3), fontSize: 14),
+                        SizedBox(height: 20),
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          child: Container(
+                            width: double.infinity, 
+                            child: Text(
+                              'Informes',
+                              style: TextStyle(color: Color(0xFFF2F2F3), fontSize: 14),
+                            ),
                           ),
                         ),
-                      ),
                       ],
                     ),
                   ),
@@ -136,7 +136,233 @@ class NuevoPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        // Resto del contenido
+                        SizedBox(height: 10),
+                        Container(
+                          width: 1066,
+                          height: 87,
+                          child: Row(
+                            children: [
+                              SizedBox(width: 20),
+                              SizedBox(
+                                width: 71,
+                                child: Column(
+                                  children: [
+                                    Text('Grado'),
+                                    SizedBox(height: 10),
+                                    Container(
+                                      width: 71,
+                                      height: 35,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: Colors.grey),
+                                        borderRadius: BorderRadius.circular(5),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(width: 20),
+                              SizedBox(
+                                width: 71,
+                                child: Column(
+                                  children: [
+                                    Text('Grupo'),
+                                    SizedBox(height: 10),
+                                    Container(
+                                      width: 71,
+                                      height: 35,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: Colors.grey),
+                                        borderRadius: BorderRadius.circular(5),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(width: 20),
+                              SizedBox(
+                                width: 245,
+                                child: Column(
+                                  children: [
+                                    Text('Materia'),
+                                    SizedBox(height: 10),
+                                    Container(
+                                      width: 245,
+                                      height: 35,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: Colors.grey),
+                                        borderRadius: BorderRadius.circular(5),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(width: 20),
+                              SizedBox(
+                                width: 245,
+                                child: Column(
+                                  children: [
+                                    Text('Profesor'),
+                                    SizedBox(height: 10),
+                                    Container(
+                                      width: 245,
+                                      height: 35,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: Colors.grey),
+                                        borderRadius: BorderRadius.circular(5),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Spacer(),
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: Text('Buscar'),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF009CDE),
+                                  onPrimary: Colors.white,
+                                  minimumSize: Size(80, 35),
+                                ),
+                              ),
+                              SizedBox(width: 10),
+                              TextButton(
+                                onPressed: () {},
+                                child: Text(
+                                  'Limpiar filtros',
+                                  style: TextStyle(color: Color(0xFF009CDE)),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        Container(
+                          width: 1066,
+                          height: 382,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: Column(
+                            children: [
+                              SizedBox(height: 30),
+                              Text(
+                                'Resultados',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Color(0xFF555555),
+                                ),
+                                textAlign: TextAlign.start,
+                              ),
+                              SizedBox(height: 20),
+                              DataTable(
+                                columns: [
+                                  DataColumn(
+                                    label: Container(
+                                      child: Text('Código', style: TextStyle(color: Color(0xFFFFFFFF))),
+                                    ),
+                                  ),
+                                  DataColumn(
+                                    label: Container(
+                                      child: Text('Materia', style: TextStyle(color: Color(0xFFFFFFFF))),
+                                    ),
+                                  ),
+                                  DataColumn(
+                                    label: Container(
+                                      child: Text('Profesor', style: TextStyle(color: Color(0xFFFFFFFF))),
+                                    ),
+                                  ),
+                                  DataColumn(
+                                    label: Container(
+                                      child: Text('Grado', style: TextStyle(color: Color(0xFFFFFFFF))),
+                                    ),
+                                  ),
+                                  DataColumn(
+                                    label: Container(
+                                      child: Text('Acciones', style: TextStyle(color: Color(0xFFFFFFFF))),
+                                    ),
+                                  ),
+                                ],
+                                rows: [
+                                  DataRow(cells: [
+                                    DataCell(Text('SOC001')),
+                                    DataCell(Text('Geografía')),
+                                    DataCell(Text('Fabio León Restrepo')),
+                                    DataCell(Text('6,7,8,9,10')),
+                                    DataCell(
+                                      Row(
+                                        children: [
+                                          Image.asset('assets/icono_ver.png', width: 20, height: 20),
+                                          SizedBox(width: 10),
+                                          Image.asset('assets/icono_borrar.png', width: 20, height: 20),
+                                        ],
+                                      ),
+                                    ),
+                                  ]),
+                                  DataRow(cells: [
+                                    DataCell(Text('SOC002')),
+                                    DataCell(Text('Historia')),
+                                    DataCell(Text('Jaime Alberto Giraldo')),
+                                    DataCell(Text('6,7,8')),
+                                    DataCell(
+                                      Row(
+                                        children: [
+                                          Image.asset('assets/icono_ver.png', width: 20, height: 20),
+                                          SizedBox(width: 10),
+                                          Image.asset('assets/icono_borrar.png', width: 20, height: 20),
+                                        ],
+                                      ),
+                                    ),
+                                  ]),
+                                  DataRow(cells: [
+                                    DataCell(Text('SOC003')),
+                                    DataCell(Text('Filosofía')),
+                                    DataCell(Text('Adriana María Zuluaga')),
+                                    DataCell(Text('9,10,11')),
+                                    DataCell(
+                                      Row(
+                                        children: [
+                                          Image.asset('assets/icono_ver.png', width: 20, height: 20),
+                                          SizedBox(width: 10),
+                                          Image.asset('assets/icono_borrar.png', width: 20, height: 20),
+                                        ],
+                                      ),
+                                    ),
+                                  ]),
+                                  DataRow(cells: [
+                                    DataCell(Text('IDM001')),
+                                    DataCell(Text('Español')),
+                                    DataCell(Text('Fabiola Ramírez')),
+                                    DataCell(Text('6,7,8,9,10,11')),
+                                    DataCell(
+                                      Row(
+                                        children: [
+                                          Image.asset('assets/icono_ver.png', width: 20, height: 20),
+                                          SizedBox(width: 10),
+                                          Image.asset('assets/icono_borrar.png', width: 20, height: 20),
+                                        ],
+                                      ),
+                                    ),
+                                  ]),
+                                  DataRow(cells: [
+                                    DataCell(Text('IDM003')),
+                                    DataCell(Text('Inglés')),
+                                    DataCell(Text('María Dolores Smith')),
+                                    DataCell(Text('6,7,8,9,10,11')),
+                                    DataCell(
+                                      Row(
+                                        children: [
+                                          Image.asset('assets/icono_ver.png', width: 20, height: 20),
+                                          SizedBox(width: 10),
+                                          Image.asset('assets/icono_borrar.png', width: 20, height: 20),
+                                        ],
+                                      ),
+                                    ),
+                                  ]),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
