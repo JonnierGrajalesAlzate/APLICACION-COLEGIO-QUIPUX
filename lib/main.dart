@@ -150,9 +150,10 @@ class MyHomePage extends StatelessWidget {
                                 );
                               },
                               child: Text('Nuevo Registro'),
-                              style: ElevatedButton.styleFrom(
+                                style: ElevatedButton.styleFrom(
                                 primary: Colors.white,
                                 onPrimary: Color(0xFF009DE0),
+                                side: BorderSide(color: Color(0xFF009CDE)),
                                 minimumSize: Size(164, 35),
                               ),
                             ),
